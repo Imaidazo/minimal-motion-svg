@@ -10,11 +10,6 @@
 
 Pure SVG. No JavaScript. No dependencies.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![SVG](https://img.shields.io/badge/Pure-SVG-ff69b4)
-![No JavaScript](https://img.shields.io/badge/JavaScript-Not%20Required-success)
-![Status](https://img.shields.io/badge/status-active-success)
-
 ---
 
 ## ✨ Features
