@@ -4,97 +4,268 @@
 
 [![Live Demo](https://img.shields.io/badge/demo-online-success.svg)](https://svgs.isavit.dev/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![SVG](https://img.shields.io/badge/Pure-SVG-ff69b4.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-informational.svg)
+![Pure SVG](https://img.shields.io/badge/Pure-SVG-ff69b4.svg)
 ![No JavaScript](https://img.shields.io/badge/JavaScript-Not%20Required-success.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
-Pure SVG. No JavaScript. No dependencies.
+---
+
+## Overview
+
+**Minimal Motion SVG** is an open-source collection of lightweight, modern and accessible animated SVG components designed for web and mobile applications.
+
+The project focuses on delivering production-ready micro-animations that require **no JavaScript**, have **zero runtime dependencies**, and integrate seamlessly into modern user interfaces.
+
+Each component is distributed as a standalone SVG file with embedded CSS animation, making it easy to use in virtually any framework or platform.
+
+🌐 **Live Demo:** https://svgs.isavit.dev/
 
 ---
 
-## ✨ Features
+## Features
 
-- Pure SVG animations
-- Lightweight
-- Infinite loop animations
-- Transparent background
-- Light & Dark themes
-- Responsive and scalable
-- Accessibility friendly
-- No JavaScript required
-- Easy CSS customization
-- Easy integration into existing projects
+* Pure SVG animations
+* Zero JavaScript dependencies
+* Lightweight and optimized assets
+* Transparent backgrounds
+* Responsive vector rendering
+* Infinite and seamless animation loops
+* Light and Dark interface variants
+* Accessible by default
+* `prefers-reduced-motion` support
+* Easy integration into existing projects
+* Easy customization through SVG and CSS
 
 ---
 
-## 📦 Components
+## Current Components
 
 ### Loaders
 
-| Component | Light | Dark | Status |
-|-----------|:----:|:----:|:------:|
-| Video Loader | ✅ | ✅ | Stable |
+| Component    | Light Theme | Dark Theme | Status |
+| ------------ | :---------: | :--------: | :----: |
+| Video Loader |      ✅      |      ✅     | Stable |
 
 ---
 
-## 🚀 Roadmap
+## Project Structure
 
-Upcoming components:
-
-- AI Processing
-- Upload
-- Download
-- Search
-- Success
-- Error
-- Warning
-- Empty State
-- Synchronization
-- Audio Processing
-- Camera Processing
-
----
-
-## 💻 Usage
-
-Simply include the SVG in your project.
-
-```html
-<img src/loaders/video-loader-blue.svg alt="Loading video">
-```
-
-or
-
-```html
-<object data="loaders/video-loader-blue.svg"></object>
+```text
+minimal-motion-svg/
+│
+├── src/
+│   └── loaders/
+│       ├── video-loader-blue.svg
+│       └── video-loader-white.svg
+│
+├── demo/
+│   ├── index.html
+│   └── assets/
+│       ├── css/
+│       └── js/
+│
+├── README.md
+├── CHANGELOG.md
+├── ROADMAP.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## 🎨 Design Principles
+## Usage
 
-Minimal Motion SVG follows a small set of principles that define every component in the library.
+### HTML
 
-- Minimalist visual language
-- Consistent motion
-- High readability
-- Smooth animations
-- Small file size
-- Transparent background
-- Responsive rendering
-- Zero runtime dependencies
-- Accessible by default
+```html
+<img
+    src="src/loaders/video-loader-blue.svg"
+    alt="Loading video"
+    width="180"
+    height="211">
+```
 
 ---
 
-## 🤝 Contributing
+### HTML Object
+
+```html
+<object
+    type="image/svg+xml"
+    data="src/loaders/video-loader-blue.svg"
+    aria-label="Loading video">
+</object>
+```
+
+---
+
+### CSS Background
+
+```css
+.video-loader{
+
+    width:180px;
+
+    aspect-ratio:512/600;
+
+    background:
+
+        center / contain
+
+        no-repeat
+
+        url("../src/loaders/video-loader-blue.svg");
+
+}
+```
+
+---
+
+## Theme Selection
+
+### Light Interfaces
+
+```text
+src/loaders/video-loader-blue.svg
+```
+
+### Dark Interfaces
+
+```text
+src/loaders/video-loader-white.svg
+```
+
+> The white version uses a transparent background and is intended for dark user interfaces.
+
+---
+
+## Accessibility
+
+Every component includes:
+
+* Semantic SVG structure
+* `<title>` element
+* `<desc>` element
+* `role="img"`
+* `prefers-reduced-motion` support
+
+When using decorative animations, prefer:
+
+```html
+<img src="..." alt="">
+```
+
+When the animation communicates interface state:
+
+```html
+<img
+    src="..."
+    alt="Loading video">
+```
+
+---
+
+## Design Principles
+
+Every component in the library follows the same design language.
+
+* Minimal visual language
+* Smooth and meaningful motion
+* Stable animations
+* Thin and consistent line weights
+* Transparent backgrounds
+* Lightweight implementation
+* Production-ready quality
+* Accessibility by default
+* Zero runtime dependencies
+* Consistent visual identity
+
+---
+
+## Browser Support
+
+Minimal Motion SVG works in all modern browsers supporting SVG and CSS animations.
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+* Opera
+* Brave
+* Arc
+
+---
+
+## Roadmap
+
+Upcoming categories include:
+
+* AI Processing
+* Search
+* Upload
+* Download
+* Status
+* Media
+* Navigation
+* Empty States
+* System Components
+
+See the complete roadmap in:
+
+* [ROADMAP.md](ROADMAP.md)
+
+---
+
+## Documentation
+
+Additional documentation is available in:
+
+* [CHANGELOG.md](CHANGELOG.md)
+* [ROADMAP.md](ROADMAP.md)
+* [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## Contributing
 
 Contributions are welcome.
 
-Every new animation should follow the project's design principles to maintain a consistent visual identity.
+Before submitting a contribution, please read:
+
+* [CONTRIBUTING.md](CONTRIBUTING.md)
+
+Every new component should preserve the project's visual language, accessibility standards and technical consistency.
 
 ---
 
-## 📄 License
+## Versioning
 
-This project is licensed under the MIT License.
+This project follows **Semantic Versioning**.
+
+Current version:
+
+**v0.1.0**
+
+---
+
+## License
+
+Released under the **MIT License**.
+
+See the complete license in:
+
+* [LICENSE](LICENSE)
+
+---
+
+## Author
+
+**Sandra dos Santos Vitoriano**
+
+---
+
+## Acknowledgements
+
+Minimal Motion SVG was created to provide a lightweight, elegant and reusable collection of animated SVG components for modern user interfaces, emphasizing performance, accessibility and long-term maintainability.
