@@ -1,28 +1,44 @@
-# minimal-motion-svg
+# Minimal Motion SVG
 
-A collection of lightweight, modern and accessible animated SVG components for web and mobile applications.
+> Lightweight, modern and accessible animated SVG components for web and mobile applications.
 
 Pure SVG. No JavaScript. No dependencies.
 
-## Features
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![SVG](https://img.shields.io/badge/Pure-SVG-ff69b4)
+![No JavaScript](https://img.shields.io/badge/JavaScript-Not%20Required-success)
+![Status](https://img.shields.io/badge/status-active-success)
 
-- 🎨 Pure SVG animations
-- ⚡ Lightweight and fast
-- ♾️ Infinite loop animations
-- 🌗 Light & Dark themes
-- 📱 Responsive and scalable
-- ♿ Accessibility-friendly
-- 🚫 No JavaScript required
-- 🎯 Easy CSS customization
+---
 
-## Components
+## ✨ Features
+
+- Pure SVG animations
+- Lightweight
+- Infinite loop animations
+- Transparent background
+- Light & Dark themes
+- Responsive and scalable
+- Accessibility friendly
+- No JavaScript required
+- Easy CSS customization
+- Easy integration into existing projects
+
+---
+
+## 📦 Components
 
 ### Loaders
 
-- ✅ Video Loader (Blue)
-- ✅ Video Loader (White)
+| Component | Light | Dark | Status |
+|-----------|:----:|:----:|:------:|
+| Video Loader | ✅ | ✅ | Stable |
 
-More components coming soon...
+---
+
+## 🚀 Roadmap
+
+Upcoming components:
 
 - AI Processing
 - Upload
@@ -33,11 +49,51 @@ More components coming soon...
 - Warning
 - Empty State
 - Synchronization
+- Audio Processing
+- Camera Processing
 
-## Philosophy
+---
 
-Minimal Motion SVG was created to provide elegant, lightweight and reusable SVG micro-animations that integrate seamlessly into modern user interfaces while maintaining excellent performance and zero runtime dependencies.
+## 💻 Usage
 
-## License
+Simply include the SVG in your project.
 
-MIT License
+```html
+<img src="loaders/video-loader-blue.svg" alt="Loading video">
+```
+
+or
+
+```html
+<object data="loaders/video-loader-blue.svg"></object>
+```
+
+---
+
+## 🎨 Design Principles
+
+Minimal Motion SVG follows a small set of principles that define every component in the library.
+
+- Minimalist visual language
+- Consistent motion
+- High readability
+- Smooth animations
+- Small file size
+- Transparent background
+- Responsive rendering
+- Zero runtime dependencies
+- Accessible by default
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+Every new animation should follow the project's design principles to maintain a consistent visual identity.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
