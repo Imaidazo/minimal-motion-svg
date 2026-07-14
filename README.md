@@ -61,7 +61,7 @@ Upcoming components:
 Simply include the SVG in your project.
 
 ```html
-<img src="loaders/video-loader-blue.svg" alt="Loading video">
+<img src/loaders/video-loader-blue.svg alt="Loading video">
 ```
 
 or
