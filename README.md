@@ -2,7 +2,7 @@
 
 > Lightweight, modern and accessible animated SVG components for web and mobile applications.
 
-[![Live Demo](https://img.shields.io/badge/demo-online-success)](https://svgs.isavit.dev/)
+[![Live Demo]([https://img.shields.io/badge/demo-online-succes](https://svgs.isavit.dev/))]
 
 Pure SVG. No JavaScript. No dependencies.
 
