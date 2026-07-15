@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512" height="512" viewBox="0 0 512 512"
+     role="img" aria-labelledby="title desc"
+     preserveAspectRatio="xMidYMid meet">
+  <title id="title">Dots loader — dark theme</title>
+  <desc id="desc">
+    Small white dots emerge from a compact central cluster, travel through further shortened varied spatial paths and return to the center in an infinite one-second loop.
+  </desc>
+
+  <rect width="512" height="512" fill="#0D1626"/>
+
+  <defs>
+    <style>
+      :root {
+        --loader-color: #FFFFFF;
+        --duration: 1s;
+      }
+
+      .dot {
+        fill: var(--loader-color);
+        transform-box: fill-box;
+        transform-origin: center;
+        animation-duration: var(--duration);
+        animation-timing-function: cubic-bezier(.45, 0, .55, 1);
+        animation-iteration-count: infinite;
+        will-change: transform;
+      }
+
+      .dot-1 { animation-name: orbit-1; }
+      .dot-2 { animation-name: orbit-2; }
+      .dot-3 { animation-name: orbit-3; }
+      .dot-4 { animation-name: orbit-4; }
+      .dot-5 { animation-name: orbit-5; }
+      .dot-6 { animation-name: orbit-6; }
+      .dot-7 { animation-name: orbit-7; }
+      .dot-8 { animation-name: orbit-8; }
+
+      @keyframes orbit-1 {
+        0%, 100% { transform: translate(0, 0) scale(1.27); }
+        20% { transform: translate(-30.22px, -18.67px) scale(.9); }
+        42% { transform: translate(24.00px, -33.78px) scale(.72); }
+        65% { transform: translate(36.45px, 12.45px) scale(.84); }
+        82% { transform: translate(-14.22px, 28.45px) scale(.96); }
+      }
+
+      @keyframes orbit-2 {
+        0%, 100% { transform: translate(0, 0) scale(1.20); }
+        18% { transform: translate(27.55px, -24.00px) scale(.78); }
+        40% { transform: translate(38.22px, 16.89px) scale(.68); }
+        63% { transform: translate(-21.33px, 33.78px) scale(.86); }
+        84% { transform: translate(-32.89px, -8.00px) scale(.92); }
+      }
+
+      @keyframes orbit-3 {
+        0%, 100% { transform: translate(0, 0) scale(1.13); }
+        22% { transform: translate(8.00px, -39.11px) scale(.66); }
+        44% { transform: translate(-36.45px, -10.67px) scale(.8); }
+        66% { transform: translate(-10.67px, 36.45px) scale(.72); }
+        86% { transform: translate(31.11px, 22.22px) scale(.94); }
+      }
+
+      @keyframes orbit-4 {
+        0%, 100% { transform: translate(0, 0) scale(1.27); }
+        16% { transform: translate(-38.22px, 6.22px) scale(.76); }
+        38% { transform: translate(-13.33px, -35.55px) scale(.7); }
+        61% { transform: translate(33.78px, -5.33px) scale(.82); }
+        83% { transform: translate(9.78px, 34.67px) scale(.9); }
+      }
+
+      @keyframes orbit-5 {
+        0%, 100% { transform: translate(0, 0) scale(1.17); }
+        19% { transform: translate(34.67px, 3.55px) scale(.68); }
+        41% { transform: translate(11.55px, 37.33px) scale(.86); }
+        64% { transform: translate(-35.55px, 15.11px) scale(.74); }
+        85% { transform: translate(-8.00px, -32.00px) scale(.92); }
+      }
+
+      @keyframes orbit-6 {
+        0%, 100% { transform: translate(0, 0) scale(1.23); }
+        21% { transform: translate(-24.00px, 31.11px) scale(.8); }
+        43% { transform: translate(32.00px, 25.78px) scale(.7); }
+        67% { transform: translate(16.00px, -37.33px) scale(.88); }
+        84% { transform: translate(-32.89px, -16.89px) scale(.9); }
+      }
+
+      @keyframes orbit-7 {
+        0%, 100% { transform: translate(0, 0) scale(1.10); }
+        17% { transform: translate(17.78px, 32.89px) scale(.72); }
+        39% { transform: translate(-33.78px, 23.11px) scale(.82); }
+        62% { transform: translate(-25.78px, -28.45px) scale(.68); }
+        86% { transform: translate(37.33px, -13.33px) scale(.96); }
+      }
+
+      @keyframes orbit-8 {
+        0%, 100% { transform: translate(0, 0) scale(1.20); }
+        23% { transform: translate(-6.22px, 38.22px) scale(.7); }
+        46% { transform: translate(36.45px, 8.89px) scale(.84); }
+        68% { transform: translate(-2.67px, -36.45px) scale(.74); }
+        87% { transform: translate(-31.11px, 10.67px) scale(.94); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .dot {
+          animation: none;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </defs>
+
+  <g aria-hidden="true">
+    <circle class="dot dot-1" cx="256" cy="256" r="4.5"/>
+    <circle class="dot dot-2" cx="256" cy="256" r="4"/>
+    <circle class="dot dot-3" cx="256" cy="256" r="3.5"/>
+    <circle class="dot dot-4" cx="256" cy="256" r="4.25"/>
+    <circle class="dot dot-5" cx="256" cy="256" r="3.75"/>
+    <circle class="dot dot-6" cx="256" cy="256" r="4"/>
+    <circle class="dot dot-7" cx="256" cy="256" r="3.5"/>
+    <circle class="dot dot-8" cx="256" cy="256" r="4.25"/>
+  </g>
+</svg>
