@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1.0-informational.svg)](CHANGELOG.md)
 [![Pure SVG](https://img.shields.io/badge/Pure-SVG-ff69b4.svg)](docs/architecture.md)
-[![No JavaScript](https://img.shields.io/badge/JavaScript-Not%20Required-success.svg)](performance.md)
+[![No JavaScript](https://img.shields.io/badge/JavaScript-Not%20Required-success.svg)](doc/performance.md)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
