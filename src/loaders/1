@@ -1,1 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="600" viewBox="0 0 512 600">
+<style>
+:root{--c:#123A73;}
+.stroke{stroke:var(--c);fill:none;stroke-width:2;vector-effect:non-scaling-stroke;stroke-linecap:round}
+.wave{stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:ripple 2.4s ease-out infinite}
+.w2{animation-delay:.8s} .w3{animation-delay:1.6s}
+.play{fill:var(--c);transform-origin:256px 250px;animation:spin 2.16s linear infinite}
+.txt{fill:var(--c);font:600 30px Arial,sans-serif;text-anchor:middle;animation:pulse 1.6s ease-in-out infinite}
+.dot{fill:var(--c);opacity:.18;animation:dot 2.4s infinite} .d2{animation-delay:.8s} .d3{animation-delay:1.6s}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes ripple{0%{transform:scale(1);opacity:.58}100%{transform:scale(3.2);opacity:0}}
+@keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
+@keyframes dot{0%,18%,100%{opacity:.18}28%,46%{opacity:1}}
+</style>
+<circle class="stroke wave" cx="256" cy="250" r="56"/><circle class="stroke wave w2" cx="256" cy="250" r="56"/><circle class="stroke wave w3" cx="256" cy="250" r="56"/>
+<circle class="stroke" style="stroke-width:2" cx="256" cy="250" r="56"/>
+<path class="play" d="M236 214 Q232 212 232 219 L232 281 Q232 288 238 284 L288 253 Q294 250 288 246 Z"/>
+<text class="txt" x="246" y="518">Carregando</text>
+<circle class="dot" cx="346" cy="510" r="4.2"/><circle class="dot d2" cx="361" cy="510" r="4.2"/><circle class="dot d3" cx="376" cy="510" r="4.2"/>
+</svg>
 
