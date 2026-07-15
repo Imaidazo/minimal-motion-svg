@@ -4,7 +4,7 @@
 
 [![Live Demo](https://img.shields.io/badge/demo-online-success.svg)](https://svgs.isavit.dev/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-0.1.0-informational.svg)
+[![Version](https://img.shields.io/badge/version-0.1.0-informational.svg)](CHANGELOG.MD)
 ![Pure SVG](https://img.shields.io/badge/Pure-SVG-ff69b4.svg)
 ![No JavaScript](https://img.shields.io/badge/JavaScript-Not%20Required-success.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
