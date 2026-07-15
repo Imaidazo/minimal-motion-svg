@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="300" height="300" viewBox="0 0 300 300"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Orbit loader — white variant</title>
+  <desc id="desc">Two animated white orbital rings rotate around a pulsing central core, while the word CARREGANDO illuminates letter by letter on a dark background.</desc>
+
+  <style>
+    @keyframes anel2 {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(-360deg) rotateY(360deg); }
+    }
+
+    @keyframes anel3 {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(-360deg); }
+    }
+
+    @keyframes pulsar {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+
+    @keyframes acenderLetra {
+      0% { opacity: 0.2; }
+      15% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+
+    .l1 { animation: acenderLetra 3s ease-in-out infinite; }
+    .l2 { animation: acenderLetra 3s ease-in-out 0.3s infinite; }
+    .l3 { animation: acenderLetra 3s ease-in-out 0.6s infinite; }
+    .l4 { animation: acenderLetra 3s ease-in-out 0.9s infinite; }
+    .l5 { animation: acenderLetra 3s ease-in-out 1.2s infinite; }
+    .l6 { animation: acenderLetra 3s ease-in-out 1.5s infinite; }
+    .l7 { animation: acenderLetra 3s ease-in-out 1.8s infinite; }
+    .l8 { animation: acenderLetra 3s ease-in-out 2.1s infinite; }
+    .l9 { animation: acenderLetra 3s ease-in-out 2.4s infinite; }
+    .l10 { animation: acenderLetra 3s ease-in-out 2.7s infinite; }
+
+    .anel2 {
+      animation: anel2 6s linear infinite;
+      transform-origin: 150px 150px;
+      transform-style: preserve-3d;
+    }
+
+    .anel3 {
+      animation: anel3 10s linear infinite;
+      transform-origin: 150px 150px;
+      transform-style: preserve-3d;
+    }
+
+    .nucleo {
+      animation: pulsar 2s ease-in-out infinite;
+      transform-origin: 150px 150px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .texto { animation: float 3s ease-in-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anel2, .anel3, .nucleo, .texto,
+      .l1, .l2, .l3, .l4, .l5,
+      .l6, .l7, .l8, .l9, .l10 {
+        animation: none;
+      }
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="brilho" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0D1626" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="300" height="300" fill="#0D1626"/>
+
+  <circle cx="150" cy="150" r="112" fill="url(#brilho)"/>
+
+  <g class="anel2">
+    <circle cx="150" cy="150" r="60"
+      stroke="#FFFFFF" stroke-width="2.5"
+      fill="none" opacity="1"/>
+  </g>
+
+  <g class="anel3">
+    <circle cx="150" cy="150" r="34"
+      stroke="#FFFFFF" stroke-width="2.5"
+      fill="none" opacity="0.88"/>
+  </g>
+
+  <g class="nucleo">
+    <circle cx="150" cy="150" r="13.5" fill="#FFFFFF" opacity="0.18"/>
+    <circle cx="150" cy="150" r="9" fill="#FFFFFF" opacity="0.35"/>
+    <circle cx="150" cy="150" r="5.25" fill="#FFFFFF" opacity="0.62"/>
+    <circle cx="150" cy="150" r="2.25" fill="#FFFFFF" opacity="1"/>
+  </g>
+
+  <g class="texto">
+    <text x="150" y="262"
+      text-anchor="middle"
+      font-family="Inter, Arial, sans-serif"
+      font-weight="700"
+      font-size="12"
+      letter-spacing="4">
+      <tspan class="l1" fill="#FFFFFF">C</tspan>
+      <tspan class="l2" fill="#FFFFFF">A</tspan>
+      <tspan class="l3" fill="#FFFFFF">R</tspan>
+      <tspan class="l4" fill="#FFFFFF">R</tspan>
+      <tspan class="l5" fill="#FFFFFF">E</tspan>
+      <tspan class="l6" fill="#FFFFFF">G</tspan>
+      <tspan class="l7" fill="#FFFFFF">A</tspan>
+      <tspan class="l8" fill="#FFFFFF">N</tspan>
+      <tspan class="l9" fill="#FFFFFF">D</tspan>
+      <tspan class="l10" fill="#FFFFFF">O</tspan>
+    </text>
+  </g>
+</svg>
