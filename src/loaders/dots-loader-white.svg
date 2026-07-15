@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Dots loader (white theme)</title>
+<desc id="desc">White dots expand from one central cluster, exchange positions through varied paths, and return to the center in an infinite one-second loop.</desc>
+<style>
+:root{--c:#FFFFFF;--d:1s}
+.dot{fill:var(--c);transform-box:fill-box;transform-origin:center;animation-duration:var(--d);animation-timing-function:cubic-bezier(.45,0,.55,1);animation-iteration-count:infinite}
+.d1{animation-name:o1}.d2{animation-name:o2}.d3{animation-name:o3}.d4{animation-name:o4}.d5{animation-name:o5}.d6{animation-name:o6}.d7{animation-name:o7}.d8{animation-name:o8}
+@keyframes o1{0%,100%{transform:translate(0,0) scale(1.9)}20%{transform:translate(-68px,-42px) scale(.9)}42%{transform:translate(54px,-76px) scale(.72)}65%{transform:translate(82px,28px) scale(.84)}82%{transform:translate(-32px,64px) scale(.96)}}
+@keyframes o2{0%,100%{transform:translate(0,0) scale(1.8)}18%{transform:translate(62px,-54px) scale(.78)}40%{transform:translate(86px,38px) scale(.68)}63%{transform:translate(-48px,76px) scale(.86)}84%{transform:translate(-74px,-18px) scale(.92)}}
+@keyframes o3{0%,100%{transform:translate(0,0) scale(1.7)}22%{transform:translate(18px,-88px) scale(.66)}44%{transform:translate(-82px,-24px) scale(.8)}66%{transform:translate(-24px,82px) scale(.72)}86%{transform:translate(70px,50px) scale(.94)}}
+@keyframes o4{0%,100%{transform:translate(0,0) scale(1.9)}16%{transform:translate(-86px,14px) scale(.76)}38%{transform:translate(-30px,-80px) scale(.7)}61%{transform:translate(76px,-12px) scale(.82)}83%{transform:translate(22px,78px) scale(.9)}}
+@keyframes o5{0%,100%{transform:translate(0,0) scale(1.75)}19%{transform:translate(78px,8px) scale(.68)}41%{transform:translate(26px,84px) scale(.86)}64%{transform:translate(-80px,34px) scale(.74)}85%{transform:translate(-18px,-72px) scale(.92)}}
+@keyframes o6{0%,100%{transform:translate(0,0) scale(1.85)}21%{transform:translate(-54px,70px) scale(.8)}43%{transform:translate(72px,58px) scale(.7)}67%{transform:translate(36px,-84px) scale(.88)}84%{transform:translate(-74px,-38px) scale(.9)}}
+@keyframes o7{0%,100%{transform:translate(0,0) scale(1.65)}17%{transform:translate(40px,74px) scale(.72)}39%{transform:translate(-76px,52px) scale(.82)}62%{transform:translate(-58px,-64px) scale(.68)}86%{transform:translate(84px,-30px) scale(.96)}}
+@keyframes o8{0%,100%{transform:translate(0,0) scale(1.8)}23%{transform:translate(-14px,86px) scale(.7)}46%{transform:translate(82px,20px) scale(.84)}68%{transform:translate(-6px,-82px) scale(.74)}87%{transform:translate(-70px,24px) scale(.94)}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+</style>
+<g aria-hidden="true">
+<circle class="dot d1" cx="256" cy="256" r="9"/><circle class="dot d2" cx="256" cy="256" r="8"/><circle class="dot d3" cx="256" cy="256" r="7"/><circle class="dot d4" cx="256" cy="256" r="8.5"/><circle class="dot d5" cx="256" cy="256" r="7.5"/><circle class="dot d6" cx="256" cy="256" r="8"/><circle class="dot d7" cx="256" cy="256" r="7"/><circle class="dot d8" cx="256" cy="256" r="8.5"/>
+</g></svg>
