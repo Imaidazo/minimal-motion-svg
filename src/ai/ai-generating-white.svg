@@ -1,0 +1,328 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="300"
+     height="250"
+     viewBox="0 0 300 250"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Animação de inteligência artificial com esfera de Dyson</title>
+  <desc id="desc">
+    Pequenos círculos convergem de uma órbita pontilhada para uma esfera de Dyson.
+    A estrutura de favos gira em torno de um núcleo luminoso pulsante.
+    Linhas finas abaixo representam conteúdo sendo produzido.
+  </desc>
+
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="32%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="68%" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="sphereShade" cx="42%" cy="36%" r="68%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.13"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0D1626" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <clipPath id="sphereClip">
+      <circle cx="150" cy="120" r="48"/>
+    </clipPath>
+
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    :root {
+      --background: #0D1626;
+      --primary: #FFFFFF;
+      --light: #FFFFFF;
+    }
+
+    .background { fill: var(--background); }
+
+    .orbit {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 2;
+      stroke-dasharray: 3 9;
+      opacity: 0.76;
+      transform-origin: 150px 120px;
+      animation: orbitRotate 7s linear infinite;
+    }
+
+    .data-dot {
+      fill: var(--light);
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .dot-1 { animation: dotIn1 2.7s ease-in infinite; }
+    .dot-2 { animation: dotIn2 2.4s ease-in 0.45s infinite; }
+    .dot-3 { animation: dotIn3 3s ease-in 0.9s infinite; }
+    .dot-4 { animation: dotIn4 2.5s ease-in 1.3s infinite; }
+    .dot-5 { animation: dotIn5 2.8s ease-in 1.75s infinite; }
+    .dot-6 { animation: dotIn6 2.3s ease-in 2.1s infinite; }
+
+    .sphere-base {
+      fill: url(#sphereShade);
+      stroke: var(--light);
+      stroke-width: 1.5;
+      opacity: 0.82;
+    }
+
+    .honeycomb {
+      transform-origin: 150px 120px;
+      animation: sphereRotate 9s linear infinite;
+    }
+
+    .hex-ring {
+      transform-origin: 150px 120px;
+      animation: sphereRotateReverse 9s linear infinite;
+    }
+
+    .hex-track {
+      fill: none;
+      stroke: var(--light);
+      stroke-width: 1.25;
+      opacity: 0.72;
+    }
+
+    .honeycomb-back {
+      transform-origin: 150px 120px;
+      animation: sphereRotateReverse 13s linear infinite;
+      opacity: 0.45;
+    }
+
+    .cell {
+      fill: var(--background);
+      fill-opacity: 0.62;
+      stroke: var(--light);
+      stroke-width: 1.5;
+      stroke-linejoin: round;
+    }
+
+    .cell.alt {
+      fill: var(--primary);
+      fill-opacity: 0.38;
+    }
+
+    .equator {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 1.2;
+      stroke-dasharray: 5 5;
+      opacity: 0.62;
+      transform-origin: 150px 120px;
+      animation: equatorRotate 5.8s linear infinite reverse;
+    }
+
+    .dyson-core {
+      fill: url(#coreGlow);
+      filter: url(#softGlow);
+      transform-origin: 150px 120px;
+      animation: corePulse 1.8s ease-in-out infinite;
+    }
+
+    .core-point {
+      fill: var(--light);
+      transform-origin: 150px 120px;
+      animation: pointPulse 1.8s ease-in-out infinite;
+    }
+
+    .output-line {
+      fill: var(--light);
+      transform-box: fill-box;
+      transform-origin: left center;
+      opacity: 0;
+    }
+
+    .line-1 { animation: writeLine 2.4s ease-in-out infinite; }
+    .line-2 { animation: writeLine 2.4s ease-in-out 0.35s infinite; }
+    .line-3 { animation: writeLine 2.4s ease-in-out 0.7s infinite; }
+
+    .cursor {
+      fill: var(--primary);
+      animation: cursorBlink 0.8s steps(1, end) infinite;
+    }
+
+    @keyframes orbitRotate {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes sphereRotate {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes sphereRotateReverse {
+      to { transform: rotate(-360deg); }
+    }
+
+    @keyframes equatorRotate {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes corePulse {
+      0%, 100% { transform: scale(0.82); opacity: 0.68; }
+      50% { transform: scale(1.16); opacity: 1; }
+    }
+
+    @keyframes pointPulse {
+      0%, 100% { transform: scale(0.85); opacity: 0.82; }
+      50% { transform: scale(1.28); opacity: 1; }
+    }
+
+    @keyframes dotIn1 {
+      0%   { transform: translate(0, 0) scale(0.75); opacity: 0; }
+      14%  { opacity: 1; }
+      78%  { opacity: 0.9; }
+      100% { transform: translate(0, 72px) scale(0.15); opacity: 0; }
+    }
+
+    @keyframes dotIn2 {
+      0%   { transform: translate(0, 0) scale(0.75); opacity: 0; }
+      14%  { opacity: 1; }
+      78%  { opacity: 0.9; }
+      100% { transform: translate(-62px, 36px) scale(0.15); opacity: 0; }
+    }
+
+    @keyframes dotIn3 {
+      0%   { transform: translate(0, 0) scale(0.75); opacity: 0; }
+      14%  { opacity: 1; }
+      78%  { opacity: 0.9; }
+      100% { transform: translate(-62px, -36px) scale(0.15); opacity: 0; }
+    }
+
+    @keyframes dotIn4 {
+      0%   { transform: translate(0, 0) scale(0.75); opacity: 0; }
+      14%  { opacity: 1; }
+      78%  { opacity: 0.9; }
+      100% { transform: translate(0, -72px) scale(0.15); opacity: 0; }
+    }
+
+    @keyframes dotIn5 {
+      0%   { transform: translate(0, 0) scale(0.75); opacity: 0; }
+      14%  { opacity: 1; }
+      78%  { opacity: 0.9; }
+      100% { transform: translate(62px, -36px) scale(0.15); opacity: 0; }
+    }
+
+    @keyframes dotIn6 {
+      0%   { transform: translate(0, 0) scale(0.75); opacity: 0; }
+      14%  { opacity: 1; }
+      78%  { opacity: 0.9; }
+      100% { transform: translate(62px, 36px) scale(0.15); opacity: 0; }
+    }
+
+    @keyframes writeLine {
+      0%, 16% { transform: scaleX(0.08); opacity: 0.22; }
+      35%, 72% { transform: scaleX(1); opacity: 1; }
+      92%, 100% { transform: scaleX(1); opacity: 0.22; }
+    }
+
+    @keyframes cursorBlink {
+      0%, 45% { opacity: 1; }
+      46%, 100% { opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orbit,
+      .data-dot,
+      .honeycomb,
+      .honeycomb-back,
+      .equator,
+      .dyson-core,
+      .core-point,
+      .output-line,
+      .cursor {
+        animation: none;
+      }
+
+      .data-dot,
+      .output-line,
+      .cursor {
+        opacity: 0.75;
+      }
+    }
+  </style>
+
+  <rect class="background" width="300" height="250"/>
+
+  <!-- Círculo pontilhado externo -->
+  <circle class="orbit" cx="150" cy="120" r="72"/>
+
+  <!-- Dados convergindo para o núcleo -->
+  <circle class="data-dot dot-1" cx="150" cy="48" r="4"/>
+  <circle class="data-dot dot-2" cx="212" cy="84" r="3.5"/>
+  <circle class="data-dot dot-3" cx="212" cy="156" r="4.5"/>
+  <circle class="data-dot dot-4" cx="150" cy="192" r="3.5"/>
+  <circle class="data-dot dot-5" cx="88" cy="156" r="4"/>
+  <circle class="data-dot dot-6" cx="88" cy="84" r="3"/>
+
+  <!-- Esfera de Dyson inteiramente contida na órbita -->
+  <circle class="sphere-base" cx="150" cy="120" r="48"/>
+
+  <g clip-path="url(#sphereClip)" aria-hidden="true">
+  <!-- Linha circular interna com hexágonos fixos e do mesmo tamanho -->
+  <g class="hex-ring" aria-hidden="true">
+    <circle class="hex-track" cx="150" cy="120" r="39"/>
+
+    <g transform="translate(150 81)">
+      <polygon class="cell alt" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(169.5 86.2)">
+      <polygon class="cell" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(183.8 100.5)">
+      <polygon class="cell alt" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(189 120)">
+      <polygon class="cell" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(183.8 139.5)">
+      <polygon class="cell alt" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(169.5 153.8)">
+      <polygon class="cell" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(150 159)">
+      <polygon class="cell alt" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(130.5 153.8)">
+      <polygon class="cell" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(116.2 139.5)">
+      <polygon class="cell alt" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(111 120)">
+      <polygon class="cell" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(116.2 100.5)">
+      <polygon class="cell alt" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+    <g transform="translate(130.5 86.2)">
+      <polygon class="cell" points="0,-6 5.2,-3 5.2,3 0,6 -5.2,3 -5.2,-3"/>
+    </g>
+  </g>
+  </g>
+
+  <!-- Núcleo pulsante -->
+  <circle class="dyson-core" cx="150" cy="120" r="23"/>
+  <circle class="core-point" cx="150" cy="120" r="6"/>
+
+  <!-- Conteúdo produzido: linhas finas e mais próximas -->
+  <g aria-hidden="true">
+    <rect class="output-line line-1" x="91" y="202" width="118" height="3.5" rx="1.75"/>
+    <rect class="output-line line-2" x="105" y="210.5" width="90" height="3.5" rx="1.75"/>
+    <rect class="output-line line-3" x="119" y="219" width="62" height="3.5" rx="1.75"/>
+    <rect class="cursor" x="187" y="216" width="3" height="9" rx="1.5"/>
+  </g>
+</svg>
